@@ -1,6 +1,7 @@
 import * as dotenv from "dotenv";
 
 import { HardhatUserConfig, task } from "hardhat/config";
+import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
@@ -28,6 +29,10 @@ const INFURA_LINK = process.env.INFURA_LINK;
 // Go to https://buidler.dev/config/ to learn more
 module.exports = {
   networks: {
+    ropsten: {
+      url: process.env.INFURA_LINK,
+      accounts: [process.env.PRIVATE_KEY]
+    },
     hardhat: {
       forking: {
         url: INFURA_LINK,
@@ -64,4 +69,9 @@ module.exports = {
     alwaysGenerateOverloads: false, // should overloads with full signatures like deposit(uint256) be generated always, even if there are no overloads?
     externalArtifacts: ["externalArtifacts/*.json"], // optional array of glob patterns with external artifacts to process (for example external libs from node_modules)
   },
+  etherscan: {
+    apiKey: {
+      ropsten: process.env.API_KEY,
+    }
+  }
 };
