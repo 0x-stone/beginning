@@ -1,0 +1,9 @@
+node_modules
+cache
+build
+.DS_Store
+.gitattributes
+.idea/
+typechain
+flatten
+package-lock.json
