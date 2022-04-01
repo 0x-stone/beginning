@@ -8,3 +8,4 @@ typechain
 .env
 flatten
 package-lock.json
+artifacts
