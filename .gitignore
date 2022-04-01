@@ -5,5 +5,6 @@ build
 .gitattributes
 .idea/
 typechain
+.env
 flatten
 package-lock.json
