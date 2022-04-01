@@ -7,7 +7,8 @@
     "test": "export NODE_ENV=test && npm run build && mocha tests",
     "tdd": "npm run test -- --watch",
     "flatten": "npx waffle flatten",
-    "deploy:repsten": "npx hardhat run --network ropsten scripts/deploy.ts"
+    "deploy:repsten": "npx hardhat run --network ropsten scripts/deploy.ts",
+    "verify:repsten": "npx hardhat verify --network ropsten 0x6CC39f5E3373013A615EA40AbB24C3aCEFB6A070"
   },
   "repository": {
     "type": "git"
@@ -22,7 +23,7 @@
     "@nomiclabs/buidler-ethers": "^2.0.0",
     "@nomiclabs/buidler-waffle": "^2.1.0",
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.13",
-    "@nomiclabs/hardhat-etherscan": "^2.1.7",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@typechain/ethers-v5": "^8.0.3",
     "@typechain/hardhat": "^3.0.0",
